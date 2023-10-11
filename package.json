@@ -1,0 +1,111 @@
+{
+  "name": "solid-spotify-embed",
+  "version": "0.1.0",
+  "description": "A simple Solid component for embedding a Spotify song or album preview.",
+  "author": "Jessy (https://github.com/jessyhq)",
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/jessyhq"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jessyhq/solid-spotify-embed"
+  },
+  "bugs": {
+    "url": "https://github.com/jessyhq/solid-spotify-embed/issues"
+  },
+  "homepage": "https://github.com/jessyhq/solid-spotify-embed#readme",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "vite": "vite",
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "solid-js": "^1.7.8"
+  },
+  "devDependencies": {
+    "tsup": "^7.2.0",
+    "tsup-preset-solid": "^2.1.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.5",
+    "vite-plugin-solid": "^2.7.0"
+  },
+  "main": "./dist/index/index.cjs",
+  "module": "./dist/index/index.js",
+  "types": "./dist/index/index.d.ts",
+  "browser": {
+    "./dist/index/server.js": "./dist/index/index.js",
+    "./dist/index/server.cjs": "./dist/index/index.cjs"
+  },
+  "exports": {
+    ".": {
+      "worker": {
+        "solid": "./dist/index/server.jsx",
+        "import": {
+          "types": "./dist/index/index.d.ts",
+          "default": "./dist/index/server.js"
+        },
+        "require": {
+          "types": "./dist/index/index.d.cts",
+          "default": "./dist/index/server.cjs"
+        }
+      },
+      "browser": {
+        "solid": "./dist/index/index.jsx",
+        "import": {
+          "types": "./dist/index/index.d.ts",
+          "default": "./dist/index/index.js"
+        },
+        "require": {
+          "types": "./dist/index/index.d.cts",
+          "default": "./dist/index/index.cjs"
+        }
+      },
+      "deno": {
+        "solid": "./dist/index/server.jsx",
+        "import": {
+          "types": "./dist/index/index.d.ts",
+          "default": "./dist/index/server.js"
+        },
+        "require": {
+          "types": "./dist/index/index.d.cts",
+          "default": "./dist/index/server.cjs"
+        }
+      },
+      "node": {
+        "solid": "./dist/index/server.jsx",
+        "import": {
+          "types": "./dist/index/index.d.ts",
+          "default": "./dist/index/server.js"
+        },
+        "require": {
+          "types": "./dist/index/index.d.cts",
+          "default": "./dist/index/server.cjs"
+        }
+      },
+      "solid": "./dist/index/index.jsx",
+      "import": {
+        "types": "./dist/index/index.d.ts",
+        "default": "./dist/index/index.js"
+      },
+      "require": {
+        "types": "./dist/index/index.d.cts",
+        "default": "./dist/index/index.cjs"
+      }
+    }
+  },
+  "typesVersions": {
+    "*": {}
+  },
+  "keywords": [
+    "react",
+    "spotify",
+    "embed",
+    "nextjs"
+  ]
+}
