@@ -6,6 +6,7 @@
 [![sponsors](https://img.shields.io/github/sponsors/diragb)](https://github.com/sponsors/diragb)
 
 Use this component to create a Spotify embed for a given Spotify link. In Spotify, click ••• > Copy Link, and paste it in the <Spotify link={...}> prop.
+
 Any link should work (albums, songs, etc.). All other props on the Spotify embed widget can also be overridden (see [here](https://developer.spotify.com/documentation/embeds)).
 
 
@@ -40,11 +41,11 @@ The `<Spotify>` component is completely customizable. Check out the following co
 
 ```tsx
 import type { Component } from 'solid-js'
-import Scrollbars from 'solid-spotify-embed'
+import Spotify from 'solid-spotify-embed'
 
-const CustomScrollbars: Component = () => {
+const CustomSpotify: Component = () => {
   return (
-    <Scrollbars
+    <Spotify
       wide={false}
       width='420px'
       height='69px'
